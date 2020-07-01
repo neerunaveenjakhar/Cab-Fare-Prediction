@@ -502,16 +502,16 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_sta
 
 
 #Multiple Linear Regression
-import statsmodels.api as sm
+#import statsmodels.api as sm
 
-model1 = sm.OLS(y_train,X_train).fit()
-model1.summary()
+#model1 = sm.OLS(y_train,X_train).fit()
+#model1.summary()
 
 
 # In[52]:
 
 
-predictions_LR = model1.predict(X_test)
+#predictions_LR = model1.predict(X_test)
 
 
 # In[53]:
