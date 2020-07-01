@@ -504,24 +504,24 @@ X_train, X_test, y_train, y_test = train_test_split(X,y,test_size=0.2,random_sta
 #Multiple Linear Regression
 import statsmodels.api as sm
 
-model = sm.OLS(y_train,X_train).fit()
-model.summary()
+model1 = sm.OLS(y_train,X_train).fit()
+model1.summary()
 
 
 # In[52]:
 
 
-predictions_LR = model.predict(X_test)
+predictions_LR = model1.predict(X_test)
 
 
 # In[53]:
 
 
 import pickle
-pickle.dump(model,open("model.pkl",'wb'))
+#pickle.dump(model,open("model.pkl",'wb'))
 
 #Loading model
-model = pickle.load(open("model.pkl",'rb'))
+#model = pickle.load(open("model.pkl",'rb'))
 
 
 # In[54]:
@@ -596,7 +596,7 @@ X_test = sc.transform(X_test)
 
 from sklearn.ensemble import RandomForestRegressor
 
-RF_regressor = RandomForestRegressor(n_estimators=200, random_state=0)  
+RF_regressor = RandomForestRegressor(n_estimators=40, random_state=0)  
 RF_model = RF_regressor.fit(X_train, y_train)  
 predictions_RF = RF_regressor.predict(X_test)  
 predictions_RF
@@ -780,7 +780,7 @@ import joblib
 # In[83]:
 
 
-joblib.dump(RF_regressor, open("predict_fare.pkl","wb"), protocol=pickle.HIGHEST_PROTOCOL)
+joblib.dump(RF_regressor, open("model.pkl","wb"), protocol=pickle.HIGHEST_PROTOCOL)
 
 
 # In[ ]:
