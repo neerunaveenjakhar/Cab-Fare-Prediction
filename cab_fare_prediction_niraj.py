@@ -529,8 +529,8 @@ import pickle
 
 from sklearn import metrics
 from math import sqrt
-error = sqrt(metrics.mean_squared_error(y_test,predictions_LR)) #calculate rmse
-print('RMSE value for Multiple Linear Regression is:', error)
+#error = sqrt(metrics.mean_squared_error(y_test,predictions_LR)) #calculate rmse
+#print('RMSE value for Multiple Linear Regression is:', error)
 
 
 # In[55]:
